@@ -1,5 +1,7 @@
 nextflow.preview.dsl=2
 
+include './src/nf-module/main.nf' params(params)
+
 process masterPrint {
     input:
         file params.master.input
@@ -14,5 +16,6 @@ process masterPrint {
 
 workflow {
     masterPrint( file(params.master.input) )
+    modulePrint( masterPrint().out )
 }
 
