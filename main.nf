@@ -16,6 +16,6 @@ process masterPrint {
 
 workflow {
     masterPrint( file(params.master.input) )
-    modulePrint( masterPrint().out )
+    modulePrint( masterPrint.out )
 }
 
