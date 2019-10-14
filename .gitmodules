@@ -1,0 +1,3 @@
+[submodule "src/nf-module"]
+	path = src/nf-module
+	url = git@github.com:cflerin/nf-module.git
